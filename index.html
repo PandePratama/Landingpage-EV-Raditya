@@ -22,11 +22,6 @@
     <meta property="twitter:description"
         content="Beralih ke kendaraan listrik sekarang. Hemat biaya operasional hingga 80%, bebas emisi, dan pilihan lengkap sepeda, motor, hingga mobil listrik terbaik.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Leaflet CSS & JS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -53,6 +48,9 @@
                         electric: '#0b4f69',
                         'electric-dark': '#083a4f',
                         'electric-light': '#01a2f0',
+                        'ocean': '#0061a8',
+                        'muted': '#5f94b1',
+                        'cream': '#f1f1e6',
                         'accent-yellow': '#ffb400',
                         canvas: '#FFFFFF',
                         ash: '#F4F4F4',
@@ -1809,68 +1807,156 @@
         </div>
     </section>
 
-    <!-- ══════════════════ SECTION 5: TESTIMONI (SLIDER) ══════════════════ -->
-    <section id="testimoni" class="bg-[#f1f1e6] py-24 border-t border-cloud overflow-hidden">
-        <div class="max-w-[1280px] mx-auto px-6">
-            <div class="text-center mb-16 reveal">
-                <span class="eyebrow text-electric mb-3 block">TESTIMONI</span>
-                <h2 class="text-[1.25rem] sm:text-[1.8rem] lg:text-[2.6rem] font-bold text-carbon">Kata Mereka Tentang
-                    Program Ini</h2>
-            </div>
-
-            <div id="testimoni-slider"
-                class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth reveal"
-                style="scrollbar-width: none;">
-                <style>
-                    #testimoni .flex::-webkit-scrollbar {
-                        display: none;
-                    }
-                </style>
-                <!-- Item 1 -->
+    <!-- ══════════════════ 8 CABANG RADITYA ══════════════════ -->
+    <section id="cabang" class="bg-white py-16 md:py-24 border-t border-cloud">
+        <div class="max-w-[1024px] mx-auto px-6 text-center reveal">
+            <span class="eyebrow text-electric mb-3 block">CABANG KAMI</span>
+            <h2 class="text-[1.25rem] sm:text-[1.8rem] lg:text-[2.6rem] font-bold text-carbon mb-4">8 Cabang Raditya
+                Siap Melayani Anda</h2>
+            <p class="text-[15px] text-graphite mb-12 max-w-2xl mx-auto">Temukan cabang Raditya terdekat di kota Anda.
+                Datang langsung untuk melihat dan mencoba berbagai pilihan kendaraan listrik.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div
-                    class="flex-none w-[85%] md:w-[400px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-black/[0.04] text-left">
-                    <div class="flex items-center gap-1 text-[#ffb400] mb-5 text-[18px]">★★★★★</div>
-                    <p class="text-[14.5px] text-graphite leading-relaxed mb-6 italic">"Sejak ganti ke motor listrik,
-                        pengeluaran bensin saya turun drastis. Isi daya di rumah jauh lebih murah daripada antre bensin.
-                        Sangat recommended!"</p>
-                    <div class="font-semibold text-carbon text-[15px] mb-1">I Wayan Sudiarta</div>
-                    <div class="text-[13px] text-pewter">Pengguna Motor Listrik</div>
+                    class="bg-[#f1f1e6] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-40 bg-[#dce6ea] flex items-center justify-center overflow-hidden">
+                        <img src="image/cabang/denpasar.png" alt="Raditya Denpasar"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+                        <svg class="w-8 h-8 text-[#8ea9b5] hidden [.placeholder_&]:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-5 text-left">
+                        <h3 class="text-[15px] font-semibold text-carbon mb-1">Raditya Denpasar</h3>
+                        <p class="text-[13px] text-pewter">Jl. Gunung Sanghyang No. 17R Denpasar</p>
+                    </div>
                 </div>
-                <!-- Item 2 -->
                 <div
-                    class="flex-none w-[85%] md:w-[400px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-black/[0.04] text-left">
-                    <div class="flex items-center gap-1 text-[#ffb400] mb-5 text-[18px]">★★★★★</div>
-                    <p class="text-[14.5px] text-graphite leading-relaxed mb-6 italic">"Awalnya cuma mau lihat-lihat
-                        motor listrik. Ternyata pilihannya sangat lengkap dari sepeda sampai mobil. Timnya membantu saya
-                        pilih yang paling sesuai kebutuhan."</p>
-                    <div class="font-semibold text-carbon text-[15px] mb-1">Ni Made Widiastuti</div>
-                    <div class="text-[13px] text-pewter">Pengguna Sepeda Listrik</div>
+                    class="bg-[#f1f1e6] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-40 bg-[#dce6ea] flex items-center justify-center overflow-hidden">
+                        <img src="image/cabang/badung.png" alt="Raditya Badung"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+                        <svg class="w-8 h-8 text-[#8ea9b5] hidden [.placeholder_&]:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-5 text-left">
+                        <h3 class="text-[15px] font-semibold text-carbon mb-1">Raditya Badung</h3>
+                        <p class="text-[13px] text-pewter">Jl. Raya Sempidi No. 9 Badung</p>
+                    </div>
                 </div>
-                <!-- Item 3 -->
                 <div
-                    class="flex-none w-[85%] md:w-[400px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-black/[0.04] text-left">
-                    <div class="flex items-center gap-1 text-[#ffb400] mb-5 text-[18px]">★★★★★</div>
-                    <p class="text-[14.5px] text-graphite leading-relaxed mb-6 italic">"Setiap hari bolak-balik kantor
-                        dulu selalu mikir biaya bensin. Sejak pindah ke mobil listrik, jauh lebih hemat dan perawatannya
-                        pun lebih mudah. Tidak perlu ganti oli lagi!"</p>
-                    <div class="font-semibold text-carbon text-[15px] mb-1">Anak Agung Gde Mahendra</div>
-                    <div class="text-[13px] text-pewter">Pengguna Mobil Listrik</div>
+                    class="bg-[#f1f1e6] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-40 bg-[#dce6ea] flex items-center justify-center overflow-hidden">
+                        <img src="image/cabang/gianyar.png" alt="Raditya Gianyar"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+                        <svg class="w-8 h-8 text-[#8ea9b5] hidden [.placeholder_&]:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-5 text-left">
+                        <h3 class="text-[15px] font-semibold text-carbon mb-1">Raditya Gianyar</h3>
+                        <p class="text-[13px] text-pewter">Jl. Raya Sakah, Sukawati Gianyar</p>
+                    </div>
                 </div>
-                <!-- Item 4 -->
                 <div
-                    class="flex-none w-[85%] md:w-[400px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-black/[0.04] text-left">
-                    <div class="flex items-center gap-1 text-[#ffb400] mb-5 text-[18px]">★★★★★</div>
-                    <p class="text-[14.5px] text-graphite leading-relaxed mb-6 italic">"Prosesnya cepat dan tidak ribet.
-                        Motor listrik langsung bisa dipakai, dan saya langsung cerita ke teman-teman. Sekarang banyak
-                        yang tertarik beralih ke listrik juga."</p>
-                    <div class="font-semibold text-carbon text-[15px] mb-1">I Ketut Wirawan</div>
-                    <div class="text-[13px] text-pewter">Pengguna Motor Listrik</div>
+                    class="bg-[#f1f1e6] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-40 bg-[#dce6ea] flex items-center justify-center overflow-hidden">
+                        <img src="image/cabang/tabanan.png" alt="Raditya Tabanan"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+                        <svg class="w-8 h-8 text-[#8ea9b5] hidden [.placeholder_&]:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-5 text-left">
+                        <h3 class="text-[15px] font-semibold text-carbon mb-1">Raditya Tabanan</h3>
+                        <p class="text-[13px] text-pewter">Jl. Pulau Nias No. 23 Tabanan</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#f1f1e6] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-40 bg-[#dce6ea] flex items-center justify-center overflow-hidden">
+                        <img src="image/cabang/singaraja.png" alt="Raditya Singaraja"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+                        <svg class="w-8 h-8 text-[#8ea9b5] hidden [.placeholder_&]:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-5 text-left">
+                        <h3 class="text-[15px] font-semibold text-carbon mb-1">Raditya Singaraja</h3>
+                        <p class="text-[13px] text-pewter">Jl. Raya Kerobokan, Kerobokan, Sawan</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#f1f1e6] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-40 bg-[#dce6ea] flex items-center justify-center overflow-hidden">
+                        <img src="image/cabang/klungkung.png" alt="Raditya Klungkung"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+                        <svg class="w-8 h-8 text-[#8ea9b5] hidden [.placeholder_&]:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-5 text-left">
+                        <h3 class="text-[15px] font-semibold text-carbon mb-1">Raditya Klungkung</h3>
+                        <p class="text-[13px] text-pewter">Jl. Gst. Ngurah Rai No. 4 Klungkung</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#f1f1e6] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-40 bg-[#dce6ea] flex items-center justify-center overflow-hidden">
+                        <img src="image/cabang/karangasem.png" alt="Raditya Karangasem"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+                        <svg class="w-8 h-8 text-[#8ea9b5] hidden [.placeholder_&]:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-5 text-left">
+                        <h3 class="text-[15px] font-semibold text-carbon mb-1">Raditya Karangasem</h3>
+                        <p class="text-[13px] text-pewter">Jl. Ahmad Yani No 37 Subagan Karangasem</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#f1f1e6] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-40 bg-[#dce6ea] flex items-center justify-center overflow-hidden">
+                        <img src="image/cabang/negara.png" alt="Raditya Negara"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+                        <svg class="w-8 h-8 text-[#8ea9b5] hidden [.placeholder_&]:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-5 text-left">
+                        <h3 class="text-[15px] font-semibold text-carbon mb-1">Raditya Negara</h3>
+                        <p class="text-[13px] text-pewter">Jl. Sandat No. 5 Baler Bale Agung, Negara</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════ SECTION 5: ALAMAT & KONTAK ══════════════════ -->
+    <!-- ══════════════════ KONTAK ══════════════════ -->
     <section id="kontak" class="py-24" style="background: linear-gradient(135deg, #0b4f69 0%, #042635 100%);">
         <div class="max-w-[900px] mx-auto px-6 text-center reveal">
             <span class="inline-block text-white/60 text-[11px] font-semibold tracking-[0.15em] uppercase mb-4">HUBUNGI
@@ -1879,39 +1965,15 @@
                 Siap Beralih ke Kendaraan Listrik?
             </h2>
             <p class="text-white/80 text-[16px] leading-relaxed mb-10 max-w-xl mx-auto">
-                Konsultasikan kebutuhan Anda sekarang. Tim Kami siap membantu proses pengajuan kredit
-                dari awal
-                hingga unit tiba di tangan Anda.
+                Kunjungi cabang Raditya terdekat atau hubungi kami untuk konsultasi dan pemesanan kendaraan listrik.
             </p>
-
-            <!-- Info kontak bawah -->
-            <div
-                class="flex flex-col sm:flex-row justify-center gap-6 text-white/70 text-[13px] border-t border-white/20 pt-8">
-                <div class="flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    Jl. Gunung Sanghyang No.17R, Padangsambian, Kec. Denpasar Bar., Kota Denpasar, Bali 80117
-                </div>
-                <div class="hidden sm:block w-px bg-white/20"></div>
-                <div class="flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Setiap Hari, 08.00 – 16.30 WITA
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- ══════════════════ FOOTER ══════════════════ -->
     <footer class="bg-white border-t border-cloud">
-        <div class="max-w-[1280px] mx-auto px-6 py-10">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div class="max-w-[1280px] mx-auto px-6 py-3">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                 <!-- <span class="font-semibold tracking-[0.2em] text-[13px] text-carbon">KENDARAAN LISTRIK</span> -->
                 <span class="text-[12px] text-pewter">Raditya © 2026</span>
             </div>
@@ -2295,157 +2357,6 @@
         let currentKreditProduct = '';
         let currentCategory = '';
         let currentTxType = 'kredit';
-        let mapInstance = null;
-        let destMarker = null;
-        let routeLayer = null;
-        let currentDistance = 0;
-        let currentOngkir = 0;
-        const BASE_LAT = -8.674366538618697;
-        const BASE_LNG = 115.20735858108183;
-        const COST_PER_KM = 5000; // Rp 5.000 per km
-
-        function initMap() {
-            if (mapInstance) {
-                mapInstance.invalidateSize();
-                return;
-            }
-
-            mapInstance = L.map('map').setView([BASE_LAT, BASE_LNG], 12);
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-            }).addTo(mapInstance);
-
-            // Base marker
-            L.marker([BASE_LAT, BASE_LNG]).addTo(mapInstance)
-                .bindTooltip('Lokasi Pengiriman', { permanent: true, direction: 'top', className: 'font-semibold text-xs' });
-
-            // Destination marker
-            destMarker = L.marker([BASE_LAT, BASE_LNG], { draggable: true }).addTo(mapInstance)
-                .bindTooltip('Geser pin ini ke lokasi Anda', { permanent: true, direction: 'top', className: 'font-semibold text-xs text-red-600' });
-
-            destMarker.on('dragend', function () {
-                const newPos = destMarker.getLatLng();
-                mapInstance.setView(newPos, mapInstance.getZoom());
-                document.getElementById('map-status').textContent = "Lokasi disesuaikan manual.";
-                calculateOngkir();
-            });
-
-            async function calculateOngkir() {
-                const latlng = destMarker.getLatLng();
-                document.getElementById('ongkir-container').style.display = 'block';
-                document.getElementById('jarak-display').textContent = 'Menghitung...';
-                document.getElementById('ongkir-display').textContent = '...';
-
-                try {
-                    // Gunakan OSRM Routing API (Gratis) untuk mendapat jarak berkendara aktual
-                    // OSRM menggunakan format: Lng,Lat
-                    const response = await fetch(`https://router.project-osrm.org/route/v1/driving/${BASE_LNG},${BASE_LAT};${latlng.lng},${latlng.lat}?overview=full&geometries=geojson`);
-                    const data = await response.json();
-
-                    if (routeLayer) {
-                        mapInstance.removeLayer(routeLayer);
-                    }
-
-                    if (data.code === 'Ok' && data.routes && data.routes.length > 0) {
-                        const distanceMeters = data.routes[0].distance;
-                        currentDistance = distanceMeters / 1000; // dalam km
-
-                        // Gambar rute di peta
-                        const routeCoords = data.routes[0].geometry.coordinates.map(coord => [coord[1], coord[0]]); // [lat, lng]
-                        routeLayer = L.polyline(routeCoords, { color: '#0b4f69', weight: 4 }).addTo(mapInstance);
-                        mapInstance.fitBounds(routeLayer.getBounds(), { padding: [20, 20] });
-                    } else {
-                        // Fallback jika gagal: pakai jarak garis lurus (haversine)
-                        const baseLatLng = L.latLng(BASE_LAT, BASE_LNG);
-                        currentDistance = baseLatLng.distanceTo(latlng) / 1000;
-                        routeLayer = L.polyline([[BASE_LAT, BASE_LNG], [latlng.lat, latlng.lng]], { color: '#0b4f69', weight: 4, dashArray: '5, 10' }).addTo(mapInstance);
-                        mapInstance.fitBounds(routeLayer.getBounds(), { padding: [20, 20] });
-                    }
-                } catch (e) {
-                    // Fallback jika API down
-                    if (routeLayer) {
-                        mapInstance.removeLayer(routeLayer);
-                    }
-                    const baseLatLng = L.latLng(BASE_LAT, BASE_LNG);
-                    currentDistance = baseLatLng.distanceTo(latlng) / 1000;
-                    routeLayer = L.polyline([[BASE_LAT, BASE_LNG], [latlng.lat, latlng.lng]], { color: '#0b4f69', weight: 4, dashArray: '5, 10' }).addTo(mapInstance);
-                    mapInstance.fitBounds(routeLayer.getBounds(), { padding: [20, 20] });
-                }
-
-                // Cek Geofencing via Nominatim (Reverse Geocoding)
-                let isDalamKota = true;
-                try {
-                    const geoResponse = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latlng.lat}&lon=${latlng.lng}`);
-                    const geoData = await geoResponse.json();
-
-                    const addressStr = geoData.display_name ? geoData.display_name.toLowerCase() : "";
-                    // Jika alamat mengandung kata 'denpasar', maka Dalam Kota.
-                    isDalamKota = addressStr.includes('denpasar');
-                } catch (geoErr) {
-                    console.error("Geocoding error:", geoErr);
-                    // Fallback berdasar jarak jika API gagal
-                    isDalamKota = currentDistance <= 20;
-                }
-
-                // Kalkulasi harga pengiriman sesuai skema Maxim Cargo
-                const BIAYA_TAMBAHAN = 56000; // Platform fee (6k) + Biaya Bongkar/Muat (50k)
-                let biayaPerjalanan = 0;
-
-                if (isDalamKota) {
-                    // Tarif Dalam Kota
-                    const BASE_DALAM_KOTA = 92000; // 60000 + 32000 (penyesuaian tarif)
-                    if (currentDistance <= 5) {
-                        biayaPerjalanan = BASE_DALAM_KOTA;
-                    } else {
-                        const extraKm = currentDistance - 5; // Dibuat desimal (proporsional) agar presisi
-                        biayaPerjalanan = BASE_DALAM_KOTA + (extraKm * 9500);
-                    }
-                } else {
-                    // Tarif Antarkota
-                    const BASE_ANTARKOTA = 117000; // Dikurangi 15.000 untuk kompensasi selisih 13-18rb agar sama dengan aplikasi
-
-                    if (currentDistance <= 6) {
-                        biayaPerjalanan = BASE_ANTARKOTA;
-                    } else if (currentDistance <= 20) {
-                        const extraKm = currentDistance - 6;
-                        biayaPerjalanan = BASE_ANTARKOTA + (extraKm * 8000);
-                    } else {
-                        const kmTier1 = 14; // Jarak dari 6 km ke 20 km adalah 14 km
-                        const extraKmTier2 = currentDistance - 20;
-                        biayaPerjalanan = BASE_ANTARKOTA + (kmTier1 * 8000) + (extraKmTier2 * 5500);
-                    }
-                }
-
-                currentOngkir = Math.round(biayaPerjalanan + BIAYA_TAMBAHAN);
-
-                document.getElementById('jarak-display').textContent = currentDistance.toFixed(1) + ' km';
-                document.getElementById('ongkir-display').textContent = formatRupiah(currentOngkir);
-            }
-
-            // Get user location
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    const userLat = position.coords.latitude;
-                    const userLng = position.coords.longitude;
-
-                    destMarker.setLatLng([userLat, userLng]);
-                    mapInstance.setView([userLat, userLng], 12);
-
-                    // Fit bounds to show both origin and destination
-                    const bounds = L.latLngBounds([[BASE_LAT, BASE_LNG], [userLat, userLng]]);
-                    mapInstance.fitBounds(bounds, { padding: [20, 20] });
-
-                    document.getElementById('map-status').textContent = "Lokasi ditemukan.";
-                    calculateOngkir();
-                }, function (error) {
-                    document.getElementById('map-status').textContent = "Gagal mendapatkan lokasi. Menggunakan lokasi default.";
-                    calculateOngkir();
-                });
-            } else {
-                document.getElementById('map-status').textContent = "Browser tidak mendukung deteksi lokasi.";
-                calculateOngkir();
-            }
-        }
 
         function formatRupiah(number) {
             return 'Rp ' + Math.round(number).toLocaleString('id-ID');
@@ -2756,21 +2667,6 @@ Berikut detail pengajuan saya:
                 const y = container.getBoundingClientRect().top + window.pageYOffset - 80;
                 window.scrollTo({ top: y, behavior: 'smooth' });
             }, 100);
-        }
-
-        // ── TESTIMONI AUTO SLIDE ──────────────────────────────
-        const testimoniSlider = document.getElementById('testimoni-slider');
-        if (testimoniSlider) {
-            setInterval(() => {
-                const item = testimoniSlider.querySelector('.flex-none');
-                if (!item) return;
-                const scrollStep = item.clientWidth + 24; // width + gap
-                if (testimoniSlider.scrollLeft + testimoniSlider.clientWidth >= testimoniSlider.scrollWidth - 10) {
-                    testimoniSlider.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    testimoniSlider.scrollBy({ left: scrollStep, behavior: 'smooth' });
-                }
-            }, 5000); // Auto slide every 5s
         }
 
         function setVariant(model, variant) {
